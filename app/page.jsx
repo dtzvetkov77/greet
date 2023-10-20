@@ -83,7 +83,7 @@ if (sortOrder === "$.0") {
             </div>
           </div>
 
-          <section className="grid grid-cols-1 px-20 gap-10 mt-6 lg:grid-cols-4 md:grid md:grid-cols-2 md:px-10 ">
+          <section className="grid grid-cols-1 px-20 gap-10 my-6 lg:grid-cols-3 xl:grid-cols-4 md:grid md:grid-cols-2 md:px-10 ">
             {displayedData.map((item) => (
               <Post key={item.id} name={item.name} price={item.prices.price} imageUrl={item.images[0].src} description={item.short_description} categories={item.categories} />
             ))}

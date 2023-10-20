@@ -23,7 +23,7 @@ export default function Post({
       <CardHeader className="pb-0 pt-2 flex-col items-center">
         <div className="flex justify-center flex-row flex-shrink flex-wrap mb-3">
           {categories.map((category) => (
-            <Chip size="sm" className="m-1 mb-2">{category.name}</Chip>
+            <Chip size="sm" className="m-1 mb-2 text-white bg-black dark:bg-default">{category.name}</Chip>
           ))}
         </div>
         <Image
@@ -44,7 +44,7 @@ export default function Post({
           {formattedDescription.length > 100 && (
             <button
               onClick={() => setShowFullDescription(!showFullDescription)}
-              className="text-white mb-3 text-bold-700  hover:underline"
+              className="dark:text-white  mb-3 text-bold-700  hover:underline"
             >
               {showFullDescription ? "Прочети по-малко" : "Прочети повече"}
             </button>
