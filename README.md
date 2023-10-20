@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Greet
+
+## Introduction
+
+This is a React-based application powered by Next.js, dynamically fetching product data from the `https://greet.bg/wp-json/wc/store/products` endpoint. It provides users the ability to filter products by category and sort them in various ways.
+
+## Why Next.js?
+
+We've chosen to utilize Next.js for this application due to its performance advantages:
+
+- **Server-Side Rendering**: Next.js provides out-of-the-box server-side rendering which improves the performance of our app especially for the initial page load.
+- **Optimized Build & Code Splitting**: This ensures that only the necessary code is loaded for any given page, enhancing the speed and user experience.
+- **SEO Benefits**: With server-rendered pages, our content is more discoverable by search engines.
+
+## Features
+
+- **Dynamic Data Fetching**: Retrieves product data from an external API and displays them.
+- **Category Filtering**: Allows users to filter displayed products based on categories.
+- **Product Sorting**: Offers multiple sorting options, including price (ascending/descending) and product name (alphabetically and in reverse).
+- **Responsive Design**: Adapts layout for both desktop and mobile views.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
+Ensure you have the following installed:
+- Node.js
+- npm
+
+### Installation and Setup
+
+1. Clone the repository to your local machine:
+2. Install the required packages:
+
+npm install
+
+3. Run the application:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This will launch the application and you can access it at `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Application Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Navbar**: A top navigation bar for the application.
+- **Post**: A component to display individual product details - name, price, image, and short description.
+- **Categories**: An interactive component allowing users to select and filter products by category.
+- **Sorting**: A dropdown component that lets users choose how they'd like to sort the displayed products.
 
-## Learn More
+## API Interaction
 
-To learn more about Next.js, take a look at the following resources:
+The app interacts mainly with the `https://greet.bg/wp-json/wc/store/products` endpoint. By default, it fetches the first page of products.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
